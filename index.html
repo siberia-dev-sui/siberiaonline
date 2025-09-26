@@ -34,6 +34,22 @@
   body #contact, body #services, body #work {
      scroll-padding: 36px;
   }
+  /* Force hero to nearly fill viewport height, accounting for sticky header */
+  .full.tagline {
+    height: calc(100svh - 8vh);
+    min-height: calc(100svh - 8vh);
+    box-sizing: border-box;
+  }
+  @supports not (height: 100svh) {
+    .full.tagline { height: 92vh; min-height: 92vh; }
+  }
+  @media (max-width: 991px) {
+    .full.tagline { height: calc(100svh - 12vh); min-height: calc(100svh - 12vh); }
+  }
+  @media (max-width: 479px) {
+    .full.tagline { height: 86svh; min-height: 86svh; }
+    @supports not (height: 100svh) { .full.tagline { height: 86vh; min-height: 86vh; } }
+  }
 </style>
 </head>
 <body class="body-2 body-1">
@@ -69,7 +85,6 @@ z-index: 0;
         <nav role="navigation" class="nav-menu w-nav-menu">
           <a href="index.html" aria-current="page" class="nav-link-4 w-nav-link w--current">Home</a>
           <a href="portfolio.html" class="nav-link-4 w-nav-link">Work</a>
-          <a href="services.html" class="nav-link-4 w-nav-link">Services</a>
           <a href="contact-us.html" class="nav-link-4 button-nav-link w-nav-link">Get A Quote</a>
         </nav>
         <div class="menu-button-3 w-nav-button">
@@ -477,9 +492,9 @@ z-index: 0;
       <h2 class="heading-12">Connect With Us </h2>
       <div class="instawrap">
         <div class="instapics">
-          <a href="https://github.com/ALTOBYSUALS" target="_blank" class="instalink w-inline-block"><img src="images/instagram-grey.png" loading="lazy" width="225" sizes="225px" alt="github logo" srcset="images/instagram-grey-p-500.png 500w, images/instagram-grey.png 800w" class="instaimg"></a>
-          <a href="mailto:djhugomendoa123@gmail.com" target="_blank" class="instalink w-inline-block"><img src="images/linkedin-grey.png" loading="lazy" width="225" sizes="225px" alt="email logo" srcset="images/linkedin-grey-p-500.png 500w, images/linkedin-grey.png 800w" class="instaimg"></a>
-          <a href="tel:1124094247" target="_blank" class="instalink w-inline-block"><img src="images/maps-grey.png" loading="lazy" width="225" sizes="225px" alt="phone logo" srcset="images/maps-grey-p-500.png 500w, images/maps-grey.png 800w" class="instaimg"></a>
+          <a href="https://github.com/siberia-dev-sui" target="_blank" class="instalink w-inline-block"><img src="images/instagram-grey.png" loading="lazy" width="225" sizes="225px" alt="github logo" srcset="images/instagram-grey-p-500.png 500w, images/instagram-grey.png 800w" class="instaimg"></a>
+          <a href="https://www.linkedin.com/in/hugo-mendoza-sui/" target="_blank" class="instalink w-inline-block"><img src="images/linkedin-grey.png" loading="lazy" width="225" sizes="225px" alt="LinkedIn" srcset="images/linkedin-grey-p-500.png 500w, images/linkedin-grey.png 800w" class="instaimg"></a>
+          <a href="tel:+5491124094247" target="_blank" class="instalink w-inline-block"><img src="images/maps-grey.png" loading="lazy" width="225" sizes="225px" alt="phone logo" srcset="images/maps-grey-p-500.png 500w, images/maps-grey.png 800w" class="instaimg"></a>
         </div>
       </div>
     </footer>
